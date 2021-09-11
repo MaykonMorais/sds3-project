@@ -12,16 +12,15 @@ import com.devsuperior.dsvendas.dto.SellerDTO;
 import com.devsuperior.dsvendas.services.SellerService;
 
 @RestController
-@RequestMapping( value="/sellers")
+@RequestMapping("/sellers")
 public class SellerController {
-
-    @Autowired
-    private SellerService sellerServices;
-
-    @GetMapping
-    public ResponseEntity<List<SellerDTO>> findAll(){
-        List<SellerDTO> list = sellerServices.findAll();
-        return ResponseEntity.ok(list);
-    }
+	@Autowired
+	private SellerService service;
+	
+	@GetMapping
+	public ResponseEntity<List<SellerDTO>> findAll() {
+		var sellers = service.findAll();
+		return ResponseEntity.ok(sellers);
+	}
 }
 
