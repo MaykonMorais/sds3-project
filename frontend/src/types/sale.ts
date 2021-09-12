@@ -1,13 +1,12 @@
+import { Seller } from "./seller";
+
 export type Sale = {
   id: number;
   visited: number;
   deals: number;
-  ammount: number;
+  amount: number;
   date: string;
-  sellerDTO: {
-    id: number;
-    name: string;
-  };
+  seller: Seller;
 };
 
 export type SalePage = {
