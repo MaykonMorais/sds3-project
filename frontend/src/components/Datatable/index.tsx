@@ -33,7 +33,9 @@ export default function DataTable() {
 
   return (
     <>
-      <Pagination page={page} onPageChange={changePage} />
+      <div className="d-flex justify-content-center w-100">
+        <Pagination page={page} onPageChange={changePage} />
+      </div>
       <div className="table-responsive">
         <table className="table table-striped table-sm">
           <thead>
